@@ -1,2 +1,6 @@
 /data
-/Rhea Data Science Intern Assessment (1) (1).pdf
+
+# Exclude all Rhea-related files and directories for privacy
+*Rhea*
+*rhea*
+*RHEA*

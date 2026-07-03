@@ -1,14 +1,14 @@
-# Rhea Data Science Internship Assessment
+# Data Science Assessment
 
 ## Overview
 This project sources, cleans, analyzes, and prepares an agricultural dataset
-for use in Rhea's crop recommendation system, following the 5-task
+for use in a crop recommendation system, following the 5-task
 assessment brief (data sourcing, cleaning, EDA, feature engineering, and
 recommendation logic).
 
 ## Project Structure
 ```
-rhea-assessment/
+data-science-project/
 ├── data/
 │   ├── raw/            # original, untouched dataset
 │   └── processed/      # cleaned dataset used for analysis
