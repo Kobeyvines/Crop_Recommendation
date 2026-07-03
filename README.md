@@ -14,9 +14,6 @@ data-science-project/
 │   └── processed/      # cleaned dataset used for analysis
 ├── notebooks/
 │   └── analysis.ipynb  # full analysis, sectioned by task
-├── src/
-│   ├── cleaning.py     # reusable data cleaning functions
-│   └── features.py     # reusable feature engineering functions
 ├── reports/
 │   ├── figures/        # exported EDA visualizations
 │   └── report.pdf      # 5-page summary report (submission deliverable)
