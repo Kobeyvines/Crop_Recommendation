@@ -1,6 +1,2 @@
 /data
 
-# Exclude all Rhea-related files and directories for privacy
-*Rhea*
-*rhea*
-*RHEA*
