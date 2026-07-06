@@ -7,3 +7,5 @@ scipy
 joblib
 jupyter
 dvc
+missingno
+statsmodels

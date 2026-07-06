@@ -46,12 +46,21 @@ Dataset Summary:
 
 ```text
 ├── models/
+│   ├── crop_baselines.pkl
 │   └── rhea_knn_recommendation_pipeline.joblib
+│
 ├── notebooks/
 │   └── analysis.ipynb
+│
 ├── reports/
 │   ├── figures/
 │   └── report.pdf
+│
+├── src/
+│   ├── inference.py
+│   ├── rhea_features.py
+│   └── serve_inference.py
+│
 ├── requirements.txt
 └── README.md
 ```
@@ -145,33 +154,50 @@ When the notebook is executed, it will automatically generate the cleaned datase
 data/processed/cleaned_crop_data.csv
 ```
 
-# Running the Project
+## Running the Project
 
-Open:
+This project was developed and tested using **Visual Studio Code (VS Code)** with the Jupyter extension. The notebook assumes this directory structure and is intended to be executed from within VS Code.
+
+Open the following notebook:
 
 ```text
 notebooks/analysis.ipynb
 ```
 
-Run every notebook cell sequentially from top to bottom.
+Run all cells sequentially from top to bottom.
 
 The notebook performs:
 
 1. Data cleaning
-2. Exploratory Data Analysis
-3. Feature Engineering
-4. KNN Model Training
-5. Model Evaluation
-6. Recommendation Generation
-7. Model Serialization
+2. Exploratory Data Analysis (EDA)
+3. Feature engineering
+4. Model training
+5. Model evaluation
+6. Recommendation generation
+7. Model serialization
 
 The trained pipeline is exported to:
 
 ```text
 models/rhea_knn_recommendation_pipeline.joblib
 ```
-
 ---
+
+# Standalone Inference
+
+After training, the serialized pipeline can be used without reopening the notebook.
+
+Run:
+
+```bash
+python src/serve_inference.py
+```
+
+The script accepts raw farmer measurements, loads the saved machine learning pipeline, generates the **Top-3 crop recommendations**, and produces a feature-level explanation describing why the highest-ranked crop was selected.
+
+This demonstrates that the deployed model can perform inference directly from raw inputs while automatically applying the same feature engineering and preprocessing learned during training.
+
+--- 
 
 # Preventing Data Leakage
 
